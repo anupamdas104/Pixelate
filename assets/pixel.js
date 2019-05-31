@@ -6,6 +6,18 @@ function changeColor(){
     document.getElementById("test").style.backgroundColor=select;
 }
 
+function fillAll(){
+
+}
+
+function fillEmpty(){
+
+}
+
+function clearAll(){
+    
+}
+
 
 
 

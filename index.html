@@ -6,7 +6,6 @@
         </title>
         <link rel="stylesheet" href="assets/style.css">
         <script src="assets/pixel.js"></script>
-
         Pixelate
     </head>
     <body>
@@ -22,7 +21,7 @@
             <form>
             Colors:
             <select id="choice">
-                <option style='color:red' value="Red" >Red</option>
+                <option value="Red" >Red</option>
                 <option value="Blue">Blue</option>
                 <option value="Yellow">Yellow</option>
                 <option value="Purple">Purple</option>
@@ -32,8 +31,18 @@
             </select>
         </form>
         </div>
-
            <button id="test" type="testing" onclick="changeColor()">try it</button>
+           <div>
+               
+           </div>
+
+        <div id="fill">
+            <button id="fillAll" onclick="fillAll()">Fill all Cells</button>
+            <button id= "fillEmpty"onclick="fillEmpty()">Fill Empty Cells</button>
+        </div>
+        <div id="clear">
+            <button id="clear" onclick="clearAll()">Clear</button>
+        </div>
         
     </body>
 </html>
