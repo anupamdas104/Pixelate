@@ -1,0 +1,8 @@
+body{
+    font-family: fantasy;
+}
+.button{
+    font-family: fantasy;
+    cursor: pointer;
+    margin:4px 2px;
+}
