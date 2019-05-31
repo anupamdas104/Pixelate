@@ -1,5 +1,5 @@
 
-//document.getElementById("rowColumn").addEventListener("click", myfunction);
+//document.getElementById("").addEventListener("click", myfunction);
 function addRow(){
    let table= document.getElementById("table");
    let row=table.insertRow(0);
@@ -20,16 +20,17 @@ function delColumn(){
     let column=table.deleteColumn(0);
     let cell=column.deleteCell(0)
 }
+
 function changeColor(){
     let select=document.getElementById("choice").value;
-    document.getElementById("test").style.backgroundColor=select;
+    document.getElementById("box").style.backgroundColor=select;
 }
 
 //fill all uncolored cells with the currently selected color
 function fillAll(){
    // let fillColor=document.getElementById("choice").value;
-   document.getElementById("test").style.back
-
+   let select=document.getElementById("choice").value;
+   document.getElementById("tbody").style.background=select;
 
 }
 
