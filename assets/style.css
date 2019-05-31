@@ -6,3 +6,17 @@ body{
     cursor: pointer;
     margin:4px 2px;
 }
+
+/* tr{
+    background-color:yellow;
+    border-color:black;
+    border-width: 5px;
+    height: 10px;
+    width: 10px;
+} */
+td{
+    border-color:black;
+    border-style:solid;
+    height: 10px;
+    width: 10px;
+} 

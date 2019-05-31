@@ -10,12 +10,12 @@
     </head>
     <body>
         <div id="button">
-            Rows<button id="row" > + </button>
-            <button id="column"> - </button>
+            Rows<button id="row" onclick="addRow()" > + </button>
+            <button  onclick="delRow()"> - </button>
         </div>
         <div>
-            Columns <button id="column" "> + </button>
-            <button> - </button>
+            Columns <button id="column" onclick="addColumn()"> + </button>
+            <button onclick="delColumn()"> - </button>
         </div>
         <div>
             <form>
@@ -31,6 +31,11 @@
             </select>
         </form>
         </div>
+        <table id="table">
+            <tr>
+            </tr>
+        </table>
+
            <button id="test" type="testing" onclick="changeColor()">try it</button>
 
         <div id="fill">
