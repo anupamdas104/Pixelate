@@ -6,8 +6,34 @@
         </title>
         <link rel="stylesheet" href="assets/style.css">
         <script src="assets/pixel.js"></script>
+
+        Pixelate
     </head>
     <body>
+        <div id="button">
+            Rows<button id="row" > + </button>
+            <button id="column"> - </button>
+        </div>
+        <div>
+            Columns <button id="column" "> + </button>
+            <button> - </button>
+        </div>
+        <div>
+            <form>
+            Colors:
+            <select id="choice">
+                <option style='color:red' value="Red" >Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Purple">Purple</option>
+                <option value="Green">Green</option>
+                <option value="Orange">Orange</option>
+                <option value="White">White</option>
+            </select>
+        </form>
+        </div>
+
+           <button id="test" type="testing" onclick="changeColor()">try it</button>
         
     </body>
 </html>
