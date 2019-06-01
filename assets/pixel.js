@@ -11,17 +11,26 @@ function delRow(){
     let cell=row.deleteCell(0);
 }
 // function addColumn(){
-//     let colNum=0;
-//     let rows=document.querySelector('#'+'table'+'tr');
-//     for(let i=0;i<rows.clientHeight;i++){
-//         let c=document.createElement('td');
-//         rows[i].appendChild(c);
-//     }
-// colNum++
-//     // let table=document.getElementById("table");
-//     // let column=table.addColumn(0);
-//     // let cell=column.deleteCell(0)
+//     // let rows=document.querySelectorAll('#'+'table'+'tr');
+//    let table=document.getElementById("tr");
+//     let column=table.addColumn(0);
+//     let cell=column.addCell(0)
 // }
+let colNum=0;
+function addColumn () {
+    if(colNum==0){
+        addRow();
+    } 
+    //addRow();
+	let rows = document.querySelectorAll('#' + 'table' +' tr');
+	for (let i = 0; i <rows.length; i++) {
+		let c = document.createElement('td');
+		//makeClickable(c);
+		rows[i].appendChild(c);
+	}
+	colNum++;
+
+}
 function delColumn(){
     let table=document.getElementById("table");
     let column=table.deleteColumn(0);
@@ -31,7 +40,7 @@ function delColumn(){
 function changeColor(){
     let select=document.getElementById("choice").value;
     var x= document.getElementsByTagName("TR");
-
+    
    
 }
 
@@ -52,6 +61,17 @@ function clearAll(){
     document.getElementById("tbody").style.background=select;
 }
 
-
+let makeClickable=function(e){
+    e.props={
+        cliked:false
+    };
+    e.onclick=function(){
+        if(e.props.clicked==false){
+            e.style.backgroundColor=choice;
+        }else{
+            e.style.backgroundColor="white";
+        }
+    }
+}
 
 
