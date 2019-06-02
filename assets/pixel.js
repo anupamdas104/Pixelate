@@ -1,9 +1,19 @@
 
 //document.getElementById("").addEventListener("click", myfunction);
+let rowNum=0;
+let colNum=0;
+
 function addRow(){
-   let table= document.getElementById("table");
-   let row=table.insertRow(0);
-   let cell=row.insertCell(0);
+    let table= document.getElementById("table");
+    let row=table.insertRow(0);
+    let cell=row.insertCell(0);
+    // let r=document.createElement('tr');
+    // for(let i=0;i<colNum;i++){
+    //     let a=document.createElement('td');
+    //     r.appendChild(c);
+    // }
+    // document.getElementById('table').appendChild(r);
+  
 }
 function delRow(){
     let table=document.getElementById("table");
@@ -16,7 +26,6 @@ function delRow(){
 //     let column=table.addColumn(0);
 //     let cell=column.addCell(0)
 // }
-let colNum=0;
 function addColumn () {
     if(colNum==0){
         addRow();
@@ -32,6 +41,15 @@ function addColumn () {
 
 }
 function delColumn(){
+    // if(colNum<=0){
+    //     return;
+    // }
+    // let rows=document.querySelectorAll('#'+'table'+'tr');
+    // for(let i=0;i<rows.length;i++){
+    //     rows[i].removeChild(rows[i].lastElementChild);
+    // }
+    // colNum--;
+
     let table=document.getElementById("table");
     let column=table.deleteColumn(0);
     let cell=column.deleteCell(0);
