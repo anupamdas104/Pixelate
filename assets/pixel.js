@@ -9,57 +9,85 @@ References: MDN Mozilla and w3schools.com
 //document.getElementById("").addEventListener("click", myfunction);
 //to keep track of no of rows and columns
 let rowNum=0;
-let colNum=0;
+let colNum=1;
+//initialize the table
+let pixelGrid = document.getElementById("grid");
 
 //function to add rows
 function addRow(){
     //store table id into table variable 
-    let table= document.getElementById("table");
-    let row=table.insertRow(0);  //append row at the end of table
-    let cell=row.insertCell(0); 
+    let rows= document.createElement("tr");
+
+    for(let i = 0; i < colNum; i++){
+        let columns = document.createElement("td");
+        columns.addEventListener("click",colorGrid);
+        rows.appendChild(columns);
+    }
+
+    pixelGrid.appendChild(rows);
+    rowNum++;
+ 
   
 }
+
 //function to delete rows
 function delRow(){
-    let table=document.getElementById("table");
-    let row=table.deleteRow(0);
-    let cell=row.deleteCell(0);
+    pixelGrid.removeChild(pixelGrid.lastChild);
+    rowNum--;
 }
 //add column function 
 function addColumn () {
     //when no column then add row
-    if(colNum==0){  
-        addRow();
-    } 
     //get all elements that matches the selector
-	let rows = document.querySelectorAll('#' + 'table' +' tr');
+    //let rows = document.querySelectorAll('#' + 'table' +' tr');
+    rows = pixelGrid.children;
 	for (let i = 0; i <rows.length; i++) {
-		let c = document.createElement('td'); //create td element
-		rows[i].appendChild(c);
+        let columns = document.createElement('td'); //create td element
+        columns.addEventListener("click",colorGrid);
+		rows[i].appendChild(columns);
 	}
 	colNum++;
 }
+
+function colorGrid(){
+    let select=document.getElementById("choice").value;
+    this.style.backgroundColor = select;
+}
 //does not work need to fix
 function delColumn(){
-    let table=document.getElementById("table");
-    let column=table.deleteColumn(0);
-    let cell=column.deleteCell(0);
+    rows = Array.from(pixelGrid.children);
+
+    rows.forEach(function(row) {
+        row.removeChild(row.lastChild);
+      });
+	colNum--;
 }
+
 // fill all cells with selected color
 function fillAll(){
     //store the selected color value into select variable
    let select=document.getElementById("choice").value;
-   //change background of tbody with select color 
-   document.getElementById("tbody").style.background=select;
+   //change background of tbody with select color
+   for(let i = 0; i < rowNum; i++){ 
+      document.getElementsByTagName("tr")[i].style.background=select;
+   }
 }
 // fill all empty cells with selected color
 function fillEmpty(){
+    let select=document.getElementById("choice").value;
+    for(let i = 0; i < rowNum; i++){ 
+        if (document.getElementsByTagName("tr")[i].style.background===""){
+            document.getElementsByTagName("tr")[i].style.background=select;
+        }
+     }
 }
 //clear all cells with default color
 function clearAll(){
     //store color white into select to use as default color to clear cell's color
-    let select=document.getElementById("white").value;
-    document.getElementById("tbody").style.background=select;
+    //let select=document.getElementById("white").value;
+    for(let i = 0; i < rowNum; i++){
+        document.getElementsByTagName("tr")[i].style.background="";
+    }
 }
 
 

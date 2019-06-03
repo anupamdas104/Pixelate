@@ -12,7 +12,6 @@ References: MDN Mozilla and w3schools.com
             Pixelate
         </title>
         <link rel="stylesheet" href="assets/style.css">
-        <script src="assets/pixel.js"></script>
         Pixelate
     </head>
     <body>
@@ -28,7 +27,6 @@ References: MDN Mozilla and w3schools.com
             <button id="column" onclick="delColumn()"> - </button>
         </div>
         <div>
-            <form>
                 <!--  Colors choice for dragdown button-->
             Colors:
             <select id="choice">
@@ -40,20 +38,12 @@ References: MDN Mozilla and w3schools.com
                 <option value="Orange">Orange</option>
                 <option id="white" value="White">White</option>
             </select>
-        </form>
         </div>
     </div>
 <!--  this is where the cells will be added as we 
 add rows and cells-->
-    <div id="box">
-        <table id="table" >
-            <tbody id="tbody">
-                <tr id="tr">
-
-                </tr>
-
-            </tbody>
-
+    <div>
+        <table id="grid" >
         </table>
      </div> <br/><br/>
      <!-- bottom bars for fill all, fill empty and clear buttons-->
@@ -67,5 +57,6 @@ add rows and cells-->
             <button id="clear" onclick="clearAll()">Clear</button>
         </div>
     </div>
+    <script src="assets/pixel.js"></script>
     </body>
 </html>
