@@ -1,8 +1,11 @@
+
+/* whole body */
 body{
     font-family: fantasy;
     text-align: center;
     font-size: 20px;
 }
+/* + and - buttons */
 .button{
     font-family: fantasy;
     cursor: pointer;
@@ -10,6 +13,7 @@ body{
     padding: 15px 32px;
     font-size: 20px;
 }
+/* rows and columns font and display */
 #row{
     font-size:13px;
     display: inline-block;
@@ -18,20 +22,24 @@ body{
     font-size:13px;
     display: inline-block;
 }
+/*  background color for rows, columns and colors 
+which are within <div> "instructions*/
 #instructions{
     background-color: grey;
     box-shadow: aqua;
 }
+/* color choice dragdown bottom */
 #choice{
     font-size:14px;
     font-family: fantasy;
 }
+/* bottom buttons (fillall, fillempty and clear) */
 #bottombar{
     font-size:30px;
     background-color: lightblue;
 }
 
-
+/* td is cells  */
 td{
     box-sizing: border-box;
     border-color:black;
@@ -39,9 +47,6 @@ td{
     height: 50px;
     width: 50px;
     text-align: center;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 } 
 
 
