@@ -18,12 +18,14 @@ function addRow(){
     //store table id into table variable 
     let rows= document.createElement("tr");
 
+    //add clickable columns to rows
     for(let i = 0; i < colNum; i++){
         let columns = document.createElement("td");
         columns.addEventListener("click",colorGrid);
         rows.appendChild(columns);
     }
 
+    //add rows to the grid
     pixelGrid.appendChild(rows);
     rowNum++;
  
@@ -32,14 +34,13 @@ function addRow(){
 
 //function to delete rows
 function delRow(){
+    //delete child of the rows
     pixelGrid.removeChild(pixelGrid.lastChild);
     rowNum--;
 }
 //add column function 
 function addColumn () {
-    //when no column then add row
-    //get all elements that matches the selector
-    //let rows = document.querySelectorAll('#' + 'table' +' tr');
+    //add columns to the rows
     rows = pixelGrid.children;
 	for (let i = 0; i <rows.length; i++) {
         let columns = document.createElement('td'); //create td element
