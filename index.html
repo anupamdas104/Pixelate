@@ -9,6 +9,8 @@
         Pixelate
     </head>
     <body>
+
+     <div id="instructions">
         <div id="button">
             Rows<button id="row" onclick="addRow()" > + </button>
             <button  onclick="delRow()"> - </button>
@@ -31,6 +33,7 @@
             </select>
         </form>
         </div>
+    </div>
 
     <div id="box">
         <table id="table" >
@@ -42,8 +45,8 @@
             </tbody>
 
         </table>
-     </div>
-
+     </div> <br/><br/>
+     <div id="bottombar">
         <div id="fill">
             <button id="fillAll" onclick="fillAll()">Fill all Cells</button>
             <button id= "fillEmpty"onclick="fillEmpty()">Fill Empty Cells</button>
@@ -52,6 +55,6 @@
         <div id="clear">
             <button id="clear" onclick="clearAll()">Clear</button>
         </div>
-        
+    </div>
     </body>
 </html>
